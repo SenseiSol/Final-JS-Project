@@ -1,0 +1,122 @@
+
+:root {
+    --bg-color: #fff;
+    --text-color: #000;
+
+    --bs-card-bg: #f9f9f9;
+    --card-shadow: 5px 5px 40px 5px #e0dbdb;
+    --card-image-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+    background: #272727;
+    --text-color: #eee;
+
+    --bs-card-bg: #444;
+    --card-shadow: none,
+    --card-image-shadow: none;
+}
+
+
+body {
+    background: #f0f0f0;
+}
+
+.filter__form {
+    max-width: 250px;
+    height: 50px;
+}
+
+.search__form {
+    max-width: 300px;
+    height: 48px;
+}
+
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: gray;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.search-box .fa-search {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #aaa;
+    cursor: pointer;
+}
+
+.search-box:hover .fa-search {
+    animation: pulse 1s infinite;
+}
+
+.filter-box {
+    width: 200px;
+    position: relative;
+}
+
+.filter-select {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    appearance: none;
+}
+
+.filter-box .fa-caret-down {
+    top: 50%;
+    right: 20px;
+    position: absolute;
+    pointer-events: none;
+    transform: translateY(-50%); /* Поворот вправо по умолчанию */
+}
+
+.card {
+    min-width: 100px;
+    box-sizing: border-box;
+    box-shadow: var(--card-shadow);
+    background-color: var(--bs-card-bg);
+}
+
+.card__image-flag {
+    max-width: 200px; 
+    max-height: 160px;
+    min-height: 158px;
+    box-shadow: var(--card-image-shadow);
+}
+
+.card__country-name {
+    font-weight: bold;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: translateY(-50%) scale(1); /*  стандартный размер */
+    }
+    50% {
+        transform: translateY(-50%) scale(1.1); /* поворот */
+    }
+    100% {
+        transform: translateY(-50%) scale(1); /* возврат к стандартному градусу */
+    }
+}

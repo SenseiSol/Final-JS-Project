@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Countries</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body data-bs-theme="light">
+    <header>
+        <nav class="navbar navbar-expand-lg mb-5 mt-0">
+            <div class="container d-flex justify-content-between align-items-center mt-3">
+                <div class="fs-3 fw-semibold text-dark"><a href="index.html" class="text-decoration-none text-dark">Final JS Project</a></div>
+                
+                <div class="d-flex align-items-center">
+                    <button id="toggle-theme" class="btn rounded-pill btn-outline-primary">Dark mode</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div class="container search-container">
+            <div class="form-box d-flex justify-content-between align-items-center">
+                <div class="search-box">
+                    <input class="search-input" id="search-filter" type="text" placeholder="Enter a query...">
+                    <i class="fa fa-search" tabindex="0"></i>
+                </div>
+                <div class="filter-box">
+                    <select class="filter-select" name="continents" id="select-filter">
+                        <option value="all">All</option>
+                        <option value="africa">Africa</option>
+                        <option value="americas">America</option>
+                        <option value="asia">Asia</option>
+                        <option value="europe">Europe</option>
+                        <option value="oceania">Oceania</option>
+                    </select>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container" id="cards-container">
+            <div class="row d-flex justify-content-center" id="cards-row">
+                <!-- Шаблон для карточек -->
+                <article class="card mt-5 mb-3 col-xl-2 col-md-3 col-5 me-3 p-0" style="display: none;">
+                    <img class="card__image-flag img-fluid rounded" alt="flag">
+
+                    <div class="card__country-info ms-4 mt-3">
+                        <div class="card__country-name fs-5"></div>
+
+                        <div class="card__country-info__inner mt-2 mb-3">
+                            <div class="card__population"></div>
+                            <div class="card__region"></div>
+                            <div class="card__capital"></div>
+                        </div>
+
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+    <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
